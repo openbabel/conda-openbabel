@@ -9,6 +9,7 @@ PYTHON_INCLUDE_DIR=$($PYTHON -c 'import distutils.sysconfig, sys; sys.stdout.wri
 PYTHON_LIBRARY=$($PYTHON -c 'from distutils.sysconfig import get_config_var; import os, sys; sys.stdout.write(os.path.join(get_config_var("LIBDIR"),get_config_var("LDLIBRARY")))')
 
 cmake -DCMAKE_INSTALL_PREFIX=$PREFIX \
+      -DCMAKE_BUILD_TYPE=RELEASE \
       -DPYTHON_LIBRARY=$PYTHON_LIBRARY \
       -DPYTHON_EXECUTABLE=$PYTHON \
       -DPYTHON_INCLUDE_DIR=$PYTHON_INCLUDE_DIR \
