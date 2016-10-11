@@ -9,14 +9,6 @@ env:
   - CONDA_PY=35
   global:
   # secure ANACONDA_TOKEN goes here
-  - secure: 
-install:
-- wget http://repo.continuum.io/miniconda/Miniconda-latest-MacOSX-x86_64.sh -O miniconda.sh
-- bash miniconda.sh -b -p $HOME/miniconda
-- export PATH="$HOME/miniconda/bin:$PATH"
-- conda update --yes conda
-- conda install --yes conda-build anaconda-client
+  - secure:
 script:
-- conda build --python=$CONDA_PY conda/ -c mwojcikowski
-after_success:
-- anaconda -t $ANACONDA_TOKEN upload $HOME/miniconda/conda-bld/*/*.tar.bz2
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then scripts/travis/run-linux.sh; else scripts/travis/run-osx.sh;; fi;
