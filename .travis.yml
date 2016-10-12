@@ -12,4 +12,4 @@ env:
   # # secure ANACONDA_TOKEN goes here
   # - secure:
 script:
-- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then scripts/travis/run-linux.sh; else scripts/travis/run-osx.sh;; fi;
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then scripts/travis/run-linux.sh; else scripts/travis/run-osx.sh; fi;
