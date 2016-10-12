@@ -28,11 +28,13 @@ requirements:
         - bzip2
         - python
         - libxml2
+        - cairo   # [linux]
     run:
         - python
         - libgcc  # [linux]
         - zlib
         - libxml2
+        - cairo   # [linux]
 test:
   imports:
     - openbabel
