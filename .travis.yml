@@ -8,8 +8,8 @@ env:
   - CONDA_PY=27
   - CONDA_PY=34
   - CONDA_PY=35
-  global:
-  # secure ANACONDA_TOKEN goes here
-  - secure:
+  # global:
+  # # secure ANACONDA_TOKEN goes here
+  # - secure:
 script:
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then scripts/travis/run-linux.sh; else scripts/travis/run-osx.sh;; fi;
