@@ -10,8 +10,7 @@ env:
   - CONDA_PY=27
   - CONDA_PY=34
   - CONDA_PY=35
-  # global:
-  # # secure ANACONDA_TOKEN goes here
-  # - secure:
+  global:
+  - secure: "nMcKD2BH3/ARuXBGNcN0LYKSemuiG4MMs9MqoPMkiINa3FSeYyMyMQukcrKR7PIkJV9niEVAawKOJzL8XKOJRs4wjpfhPqkWAJD9Nkkrn/xPVj3a2jWGhjAbIO6U4iJXpqhYGqdfTBki/oUf8hAAcAJ+MuVlDCPCKPDIyqs/+1BHSxbKlO+qWgxf8keyodrjMCqUxDvxkcaYIarmw/5DPg6b0eofnMLRRXCsKbIWolAso/BYfTdGD2rfHyfk48PSpgNVBOk4MCCGQqHcdBzYIMVaFY5401AMMD+NgNXG3g2SXvEKbrdWPgAr0zhi++3ht19uNr6V5GrCj8UFy7v+OAWgWBf/5iP4Y8Ft3gk0Tm0GKK6sCqhvekyTkXzz0ZdkclTCvlhlMzjh667IeWiWeSM/Xm9e3YRZBvTGihVp79BmO/5ct5NV3vJcDZuIlrL0p1xNMfj55XpzXtkCGI2g0aAw5T8QIkt86m+zT1ApjrltRhik1lerBeNZywkDTAY+MGvAOJWvbCPB/DiUMoLBJa9xecBTw/EAM8vHPQdpv0m/OIC5dEfMdvD3kJm0m4XvAYfVjtIH4C2cl+Bl8RVody1sfIVO13CebXaBPFYgdfrCM8LOuMUf0yT57kUgtmH0zpZPiStjd9enRCN3lXKL7KJQXFHVTtwH3/dOdRdngtA="
 script:
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then scripts/travis/run-linux.sh; else scripts/travis/run-osx.sh; fi;
