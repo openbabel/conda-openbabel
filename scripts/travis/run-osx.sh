@@ -6,4 +6,4 @@ export PATH="$HOME/miniconda/bin:$PATH"
 conda update --yes conda
 conda install --yes conda-build anaconda-client
 conda build --python=$CONDA_PY recipe/ -c openbabel
-anaconda -t $ANACONDA_TOKEN upload $HOME/miniconda/conda-bld/*/*.tar.bz2
+anaconda -t $ANACONDA_TOKEN upload --force $HOME/miniconda/conda-bld/*/*.tar.bz2
