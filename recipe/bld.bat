@@ -6,7 +6,6 @@ cmake ^
       -DPYTHON_BINDINGS=ON ^
       -DRUN_SWIG=ON ^
       -DCMAKE_BUILD_TYPE=Release ^
-      -DINCHI_LIBRARY="inchi" ^
       .
 
 cmake --build . --target install --config Release
