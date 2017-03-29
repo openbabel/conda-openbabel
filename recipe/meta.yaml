@@ -12,9 +12,10 @@ source:
         - fix_library_path_search.diff
         - fix_data_path.diff
         - fix_babel_test_paths.diff
+        - fix_python_3.6.diff  # [py3k]
 
 build:
-    number: 1
+    number: 2
     detect_binary_files_with_prefix: true
 
 requirements:
