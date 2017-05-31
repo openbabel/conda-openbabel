@@ -15,7 +15,7 @@ source:
         - fix_python_3.6.diff  # [py3k]
 
 build:
-    number: 2
+    number: 3
     detect_binary_files_with_prefix: true
 
 requirements:
@@ -29,21 +29,22 @@ requirements:
         - bzip2
         - python
         - libxml2
-        - cairo   # [linux]
+        - cairo
     run:
         - python
         - libgcc  # [linux]
         - zlib
         - libxml2
-        - cairo   # [linux]
+        - cairo
 test:
   imports:
     - openbabel
     - pybel
   commands:
     - obabel --help
-    - obabel -:'c1ccccc1' --gen3d -omol2
-    - obabel -:'c1ccccc1' --gen3d -oinchi
+    - obabel -:c1ccccc1 --gen3d -omol2
+    - obabel -:c1ccccc1 --gen3d -oinchi
+    - obabel -:c1ccccc1 -opng -O img.png
 
 about:
     home: http://www.openbabel.org/
