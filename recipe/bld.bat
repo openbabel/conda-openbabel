@@ -8,6 +8,8 @@ cmake ^
       -DCMAKE_BUILD_TYPE=Release ^
       .
 
+ctest
+
 cmake --build . --target install --config Release
 
 :: Where should BABEL_DATADIR go?
