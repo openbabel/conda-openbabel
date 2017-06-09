@@ -20,3 +20,5 @@ xcopy %PREFIX%\bin %PREFIX%\Library\bin /e /c
 rmdir /s /q %PREFIX%\bin
 
 ctest
+
+echo "Done!"
