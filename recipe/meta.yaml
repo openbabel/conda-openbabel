@@ -1,13 +1,11 @@
 
 package:
     name: openbabel
-    version: 2.4.1
+    version: 2.4.99
 
 source:
-    fn: openbabel-master.zip
-    url: https://github.com/openbabel/openbabel/archive/master.zip
-    # sha1: 6fefb2355601b665bea5840fe8e6f95bd48023c9
-
+    git_url: https://github.com/openbabel/openbabel.git
+    git_rev: master
     patches:
         - fix_library_path_search.diff
         - fix_data_path.diff
