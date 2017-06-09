@@ -9,10 +9,10 @@ source:
     # git_url: https://github.com/openbabel/openbabel.git
     # git_rev: master
     patches:
-        - fix_library_path_search.diff
-        - fix_data_path.diff
-        - fix_babel_test_paths.diff
-        - fix_python_3.6.diff  # [py3k]
+        # - fix_library_path_search.diff
+        # - fix_data_path.diff
+        # - fix_babel_test_paths.diff
+        # - fix_python_3.6.diff  # [py3k]
 
 build:
     number: 3
