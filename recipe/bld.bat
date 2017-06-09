@@ -8,9 +8,10 @@ cmake ^
       -DCMAKE_BUILD_TYPE=Release ^
       .
 
-ctest
 
 cmake --build . --target install --config Release
+
+ctest
 
 :: Where should BABEL_DATADIR go?
 xcopy %PREFIX%\bin\data %PREFIX%\share\openbabel /e /c
