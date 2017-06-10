@@ -2,7 +2,7 @@ cmake ^
       -G "%CMAKE_GENERATOR%" ^
       -DCMAKE_INSTALL_PREFIX=%PREFIX% ^
       -DWITH_INCHI=ON ^
-      -DINCHI_LIBRARY=%SRC_DIR%\include\inchi\ ^
+      -DOPENBABEL_USE_SYSTEM_INCHI=FALSE^
       -DPYTHON_EXECUTABLE=%PYTHON% ^
       -DPYTHON_BINDINGS=ON ^
       -DRUN_SWIG=ON ^
@@ -18,6 +18,8 @@ rmdir /s /q %PREFIX%\bin\data
 
 xcopy %PREFIX%\bin %PREFIX%\Library\bin /e /c
 rmdir /s /q %PREFIX%\bin
+
+set "BABEL_DATADIR=%PREFIX%/bin/data/"
 
 ctest
 
