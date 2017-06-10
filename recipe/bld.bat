@@ -2,7 +2,7 @@ cmake ^
       -G "%CMAKE_GENERATOR%" ^
       -DCMAKE_INSTALL_PREFIX=%PREFIX% ^
       -DWITH_INCHI=ON ^
-      -DINCHI_LIBRARY=%SRC_DIR%/include/inchi ^
+      -DINCHI_LIBRARY=%SRC_DIR%\include\inchi\ ^
       -DPYTHON_EXECUTABLE=%PYTHON% ^
       -DPYTHON_BINDINGS=ON ^
       -DRUN_SWIG=ON ^
