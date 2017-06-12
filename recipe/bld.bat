@@ -2,7 +2,6 @@ cmake ^
       -G "%CMAKE_GENERATOR%" ^
       -DCMAKE_INSTALL_PREFIX=%PREFIX% ^
       -DWITH_INCHI=ON ^
-      -DWITH_STATIC_INCHI=ON ^
       -DOPENBABEL_USE_SYSTEM_INCHI=FALSE^
       -DPYTHON_EXECUTABLE=%PYTHON% ^
       -DPYTHON_BINDINGS=ON ^
@@ -22,6 +21,6 @@ rmdir /s /q %PREFIX%\bin
 
 set "BABEL_DATADIR=%PREFIX%/bin/data/"
 
-ctest
+ctest --verbose
 
 echo "Done!"
