@@ -10,7 +10,7 @@ cmake ^
       .
 
 
-cmake --build . --target install --config Release -- -j2
+cmake --build . --target install --config Release
 
 :: Where should BABEL_DATADIR go?
 xcopy %PREFIX%\bin\data %PREFIX%\share\openbabel /e /c
