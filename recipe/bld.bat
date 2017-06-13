@@ -10,7 +10,7 @@ cmake ^
       .
 
 
-cmake --build . --target install --config Release
+cmake --build . --target install --config Release -j2
 
 :: Where should BABEL_DATADIR go?
 xcopy %PREFIX%\bin\data %PREFIX%\share\openbabel /e /c
@@ -21,6 +21,6 @@ rmdir /s /q %PREFIX%\bin
 
 set "BABEL_DATADIR=%PREFIX%/bin/data/"
 
-ctest --verbose
+ctest -j2 --output-on-failure
 
 echo "Done!"
