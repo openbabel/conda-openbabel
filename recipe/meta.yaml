@@ -13,14 +13,16 @@ source:
         - fix_data_path.diff
         - fix_babel_test_paths.diff
         - fix_python_3.6.diff  # [py3k]
+        - python_link.diff
 
 build:
-    number: 3
+    number: 4
     detect_binary_files_with_prefix: true
 
 requirements:
     build:
         - gcc     # [linux]
+        - libgcc  # [linux]
         - llvm    # [osx]
         - cmake
         - zlib
