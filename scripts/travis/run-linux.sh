@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 mkdir conda-bld
 docker pull condaforge/linux-anvil
 docker run -e CONDA_PY -e ANACONDA_TOKEN -e TRAVIS_BRANCH \
