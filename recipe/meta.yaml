@@ -21,8 +21,9 @@ build:
 
 requirements:
     build:
-        - gcc     # [linux]
-        - libgcc  # [linux]
+        # Including gcc interfered with condaforge linux-anvil's one
+        # - gcc     # [linux]
+        # - libgcc  # [linux]
         - llvm    # [osx]
         - cmake
         - zlib

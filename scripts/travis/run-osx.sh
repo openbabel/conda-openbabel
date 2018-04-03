@@ -6,7 +6,9 @@ conda update --yes conda
 conda install --yes conda-build anaconda-client
 conda build --python=$CONDA_PY recipe/ -c openbabel
 
+ls -lnh  $HOME/miniconda/conda-bld/*/
+
 # upload only on master
-if [ $TRAVIS_BRANCH == "master" ]; then
+if [ "$TRAVIS_BRANCH" == "master" ]; then
   anaconda -t $ANACONDA_TOKEN upload --force $HOME/miniconda/conda-bld/*/*.tar.bz2
 fi
