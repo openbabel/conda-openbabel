@@ -35,7 +35,7 @@ requirements:
         - cairo
     run:
         - python
-        - libgcc  # [linux]
+        - libgcc-ng  # [linux]
         - zlib
         - libxml2
         - cairo
